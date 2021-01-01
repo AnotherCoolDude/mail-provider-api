@@ -1,0 +1,345 @@
+{
+  "lastUpdated": 1609469890665,
+  "newsletter": [
+    {
+      "id": "2020-12-25T04:59:40.000Z",
+      "envelope": {
+        "date": "2020-12-25T04:59:40.000Z",
+        "subject": "Christian, dein morgendliches Update",
+        "from": [
+          {
+            "name": "whathappened.io",
+            "address": "daily@whathappened.io"
+          }
+        ],
+        "sender": [
+          {
+            "name": "whathappened.io",
+            "address": "daily@whathappened.io"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "whathappened.io",
+            "address": "daily@whathappened.io"
+          }
+        ],
+        "to": [
+          {
+            "name": "Christian Hovenbitzer",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<b68a9433d846462cc87bda548.9802d4775b.20201225045936.f048a547c3.ef77b3ab@mail209.atl21.rsgsv.net>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/SPO3N3.html",
+      "added": "2021-01-01T02:58:10.639Z"
+    },
+    {
+      "id": "2020-12-26T12:12:25.000Z",
+      "envelope": {
+        "date": "2020-12-26T12:12:25.000Z",
+        "subject": "☕️Best of Brew",
+        "from": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<20201226071225.22475745.2494560@sailthru.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/0tvkK2.html",
+      "added": "2021-01-01T02:58:10.647Z"
+    },
+    {
+      "id": "2020-12-28T11:23:38.000Z",
+      "envelope": {
+        "date": "2020-12-28T11:23:38.000Z",
+        "subject": "Tesla Boombox 📻, Octopus punches fish 🐙, GoDaddy's terrible email 🤡",
+        "from": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<01000176a916e59b-387f297e-ecc7-45d5-930f-ab5538c86bee-000000@email.amazonses.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/Esyc5f.html",
+      "added": "2021-01-01T02:58:10.649Z"
+    },
+    {
+      "id": "2020-12-28T12:17:26.000Z",
+      "envelope": {
+        "date": "2020-12-28T12:17:26.000Z",
+        "subject": "☕️ Feeling lucky?",
+        "from": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<20201228071726.22472261.2495559@sailthru.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/sNyxKp.html",
+      "added": "2021-01-01T02:58:10.651Z"
+    },
+    {
+      "id": "2020-12-29T11:23:28.000Z",
+      "envelope": {
+        "date": "2020-12-29T11:23:28.000Z",
+        "subject": "TikTok's Ratatouille musical 🎵, Tesla police cars 👮, Starlink ground station found 📡",
+        "from": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<01000176ae3d1959-be43154a-8882-47cc-90fb-2d2ad2d046b2-000000@email.amazonses.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/-b-ScZ.html",
+      "added": "2021-01-01T02:58:10.652Z"
+    },
+    {
+      "id": "2020-12-29T12:13:14.000Z",
+      "envelope": {
+        "date": "2020-12-29T12:13:14.000Z",
+        "subject": "☕️ Making a pledge",
+        "from": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<20201229071314.22476653.2476560@sailthru.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/K5v-kW.html",
+      "added": "2021-01-01T02:58:10.654Z"
+    },
+    {
+      "id": "2020-12-30T11:23:46.000Z",
+      "envelope": {
+        "date": "2020-12-30T11:23:46.000Z",
+        "subject": "Apple Watch leaks ⌚, dancing robots 🤖, wooden satellites 🛰️",
+        "from": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<01000176b363bb92-b22961e5-9c3a-4e49-837e-2411b9fef4d4-000000@email.amazonses.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/RgoZuw.html",
+      "added": "2021-01-01T02:58:10.656Z"
+    },
+    {
+      "id": "2020-12-30T12:16:07.000Z",
+      "envelope": {
+        "date": "2020-12-30T12:16:07.000Z",
+        "subject": "☕️ Going public",
+        "from": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<20201230071607.22470886.2458823@sailthru.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/kSlS1I.html",
+      "added": "2021-01-01T02:58:10.659Z"
+    },
+    {
+      "id": "2020-12-31T11:24:10.000Z",
+      "envelope": {
+        "date": "2020-12-31T11:24:10.000Z",
+        "subject": "Amazon acquires podcasts 🎤, Ticketmaster hacks competitor 🎟️, failed side projects  📉",
+        "from": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Dan from TLDR",
+            "address": "dan@tldrnewsletter.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<01000176b88a75e9-ca371037-d43b-444e-97a9-ebcf794bc6b1-000000@email.amazonses.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/86raN9.html",
+      "added": "2021-01-01T02:58:10.662Z"
+    },
+    {
+      "id": "2020-12-31T12:17:22.000Z",
+      "envelope": {
+        "date": "2020-12-31T12:17:22.000Z",
+        "subject": "☕️ We had to say it",
+        "from": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "sender": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "replyTo": [
+          {
+            "name": "Morning Brew",
+            "address": "crew@morningbrew.com"
+          }
+        ],
+        "to": [
+          {
+            "name": "",
+            "address": "christian.hovenbitzer@gmx.net"
+          }
+        ],
+        "messageId": "<20201231071721.22472975.2494760@sailthru.com>"
+      },
+      "htmlPath": "/Users/christianhovenbitzer/projects/newsletter_fetcher/db/html/Dddpou.html",
+      "added": "2021-01-01T02:58:10.665Z"
+    }
+  ]
+}
