@@ -1,2 +1,3 @@
 # Express API for providing mails
 [![Build Status](https://travis-ci.com/AnotherCoolDude/mail-provider-api.svg?token=EpFfHjSsJg1xMkke2qDg&branch=master)](https://travis-ci.com/AnotherCoolDude/mail-provider-api)
+[![Coverage Status](https://coveralls.io/repos/github/AnotherCoolDude/mail-provider-api/badge.svg?branch=master)](https://coveralls.io/github/AnotherCoolDude/mail-provider-api?branch=master)
