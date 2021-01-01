@@ -1,5 +1,4 @@
 const { ImapFlow } = require('imapflow');
-require('dotenv').config()
 
 const connect = async () => {
     const client = new ImapFlow({
