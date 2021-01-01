@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+import { testEnvironmentVariable } from '../settings';
+
+const indexRouter = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.status(200).json({message: "Welcome to the mail provider api"});
+indexRouter.get('/', (_, res) => {
+  res.status(200).json({ message: testEnvironmentVariable });
 });
 
-module.exports = router;
+export default indexRouter;

@@ -1,10 +1,10 @@
-var express = require('express');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
-var indexRouter = require('./routes/index');
+import indexRouter from './routes/index';
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -12,13 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use('/v1', indexRouter);
 
-app.use((err, req, res, next) => {
-    res.status(400).json({ error: err.stack });
-});
-  
-module.exports = app;
+export default app;
 
- //const { connect, disconnectClient, fetch } = require('./mailfetcher');
+// const { connect, disconnectClient, fetch } = require('./mailfetcher');
 // const lowDB = require('lowdb');
 // const { nanoid } = require('nanoid');
 // const FileSync = require('lowdb/adapters/FileSync');
@@ -44,7 +40,6 @@ module.exports = app;
 //         message: "Route not implemented"
 //     })
 // })
-
 
 // let port = process.env.SERVER_PORT || 8080;
 // app.listen(port, async () => {
@@ -102,9 +97,4 @@ module.exports = app;
 //     let p = `${dbPath}/${id}.html`;
 //     fs.writeFileSync(p, source);
 //     return p;
-// }
-
-// let createOrInsert = (lowdb, path, obj) => {
-//     lowdb
-//         .find({""})
 // }
