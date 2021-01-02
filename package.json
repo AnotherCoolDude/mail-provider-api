@@ -11,7 +11,8 @@
     "pretty": "prettier --write '**/*.{js,json}' '!node_modules/**'",
     "postpretty": "./node_modules/.bin/eslint ./src --fix",
     "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "runQuery": "babel-node ./src/utils/runQuery"
   },
   "author": "Christian Hovenbitzer",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "express": "^4.17.1",
     "imapflow": "^1.0.51",
     "lowdb": "^1.0.0",
+    "mailparser": "^3.0.1",
     "morgan": "^1.10.0",
     "nanoid": "^3.1.20"
   },

@@ -4,3 +4,4 @@ coverage/
 build/
 .nyc_output/
 .vscode
+src/db/
