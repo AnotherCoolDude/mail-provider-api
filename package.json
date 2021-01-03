@@ -23,6 +23,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "imapflow": "^1.0.51",
+    "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
     "mailparser": "^3.0.1",
     "morgan": "^1.10.0",

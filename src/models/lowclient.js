@@ -3,7 +3,6 @@ import FileSync from 'lowdb/adapters/FileSync';
 import fs from 'fs';
 import * as fsPath from 'path';
 import { dbRelPath } from '../settings';
-import { writeMailToHTMLFile } from '../utils/helperFunctions';
 
 class LowDB {
   constructor() {
@@ -25,43 +24,43 @@ class LowDB {
       .write();
   }
 
-  getAll(path) {
-    return this.db.get(path).value();
-  }
-
-  get(path, id) {
+  get(path, compareFunc = undefined) {
     return this.db
       .get(path)
-      .find((m) => new Date(m.id).getTime() === new Date(id).getTime())
+      .filter((m) => (compareFunc ? compareFunc(m) : true))
       .value();
   }
 
-  async update(path, obj, id) {
-    const o = obj;
-    const src = obj.source;
-    delete o.source;
-
-    const index = this.db
-      .get(path)
-      .findIndex((m) => new Date(m.id).getTime() === new Date(id).getTime())
-      .value();
-
-    if (index === -1) {
-      o.htmlPath = await writeMailToHTMLFile(this.htmlPath, src);
-      console.log(this.db.get(path).push(o).write());
-    } else {
-      this.db
-        .update(`${path}[${index}]`, async (m) => {
-          const nPath = fs.existsSync(m.htmlPath)
-            ? m.htmlPath
-            : await writeMailToHTMLFile(this.htmlPath, src);
-          o.htmlPath = nPath;
-          return o;
-        })
-        .write();
+  updateOrCreate(path, obj, compareFunc = undefined) {
+    // check if path exists
+    if (!this.db.has(path).value()) {
+      // if not, create
+      return this.db.set(path, obj).write();
     }
 
-    this.db.set('lastUpdated', new Date()).write();
+    // is path array?
+    if (!this.db.get(path).isArray().value()) {
+      // if not, simply override the value
+      return this.db.set(path, obj).write();
+    }
+
+    // try to update existing value
+    let updated = false;
+    const res = this.db
+      .get(path)
+      .find((val) => {
+        updated = compareFunc ? compareFunc(val) : val === obj;
+        return updated;
+      })
+      .assign(obj)
+      .write();
+
+    // if existing value could not be found, append the new value
+    if (!updated) {
+      return this.db.get(path).push(obj).write();
+    }
+
+    return res;
   }
 
   delete(path, id) {

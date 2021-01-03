@@ -1,9 +1,8 @@
 class Model {
-  constructor(id, envelope, htmlPath, source) {
+  constructor(id, envelope, htmlPath) {
     this.envelope = envelope;
     this.htmlPath = htmlPath;
     this.id = id;
-    this.source = source;
   }
 }
 
