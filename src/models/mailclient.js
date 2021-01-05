@@ -1,14 +1,15 @@
+import { simpleParser } from 'mailparser';
 import { mailFetcher as mf } from './mailfetcher';
-import { mailbox } from '../settings';
 
-class Client {
+class MailClient {
   constructor() {
-    this.mailbox = mailbox || 'Newsletter';
+    this.mailbox = '';
     this.connected = false;
   }
 
-  async connect() {
+  async connect(mailbox) {
     if (!this.connected) {
+      this.mailbox = mailbox;
       this.client = await mf.connect(this.mailbox);
       this.connected = true;
     }
@@ -25,9 +26,19 @@ class Client {
       console.error('client not connected');
       return [];
     }
-    const msg = await mf.fetch(this.client, date, 'since', this.mailbox, true);
+    const msg = await mf.fetch(this.client, date, 'since', true);
+
+    // convert source to better handle data
+    const pp = [];
+    msg.forEach(m => {
+      pp.push(simpleParser(m.source));
+    });
+    const res = await Promise.all(pp);
+    res.forEach((v, i) => {
+      msg[i].source = v.html;
+    });
     return msg;
   }
 }
 
-export default new Client();
+export default new MailClient();

@@ -1,6 +1,6 @@
-import { retrieveMails, getMails } from './queryFunctions';
+import { retrieveMails } from './queryFunctions';
+import { mailbox } from '../settings';
 
 (async () => {
-  await retrieveMails(new Date('2020-12-01'));
-  console.table(getMails());
+  await retrieveMails(mailbox, new Date('2020-12-01'));
 })();

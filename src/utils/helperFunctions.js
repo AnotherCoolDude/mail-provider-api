@@ -1,21 +1,10 @@
-import { simpleParser } from 'mailparser';
-import path from 'path';
-import { writeFileSync } from 'fs';
-import { nanoid } from 'nanoid';
-
-const writeMailToFile = (dirPath, source) => {
-  const fullPath = path.join(dirPath, `${nanoid(5)}.html`);
-  simpleParser(source).then((mail) => {
-    if (!mail.html) {
-      console.log('error: no body to parse');
-      return false;
-    }
-    writeFileSync(fullPath, mail.html);
-    return true;
+const compareDateStrings = (str1, str2) => new Date(str1).getTime() === new Date(str2).getTime();
+const mapObject = (obj1, obj2) => {
+  const newObj = obj1;
+  Object.keys(obj1).forEach((o) => {
+    newObj[o] = obj2[o];
   });
-  return fullPath;
+  return newObj;
 };
 
-const compareDateStrings = (str1, str2) => new Date(str1).getTime() === new Date(str2).getTime();
-
-export { writeMailToFile, compareDateStrings };
+export { compareDateStrings, mapObject };

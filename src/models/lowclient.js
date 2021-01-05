@@ -8,20 +8,22 @@ class LowDB {
   constructor() {
     const relPath = dbRelPath || '/db';
     this.path = fsPath.join(fsPath.resolve('./src'), relPath);
-    this.htmlPath = fsPath.join(this.path, '/html');
+    this.assetsPath = fsPath.join(this.path, '/assets');
+    this.db = undefined;
 
-    if (!fs.existsSync(this.htmlPath)) {
-      fs.mkdirSync(this.htmlPath, { recursive: true });
-      console.debug(`created path: ${this.htmlPath}`);
+    if (!fs.existsSync(this.assetsPath)) {
+      fs.mkdirSync(this.assetsPath, { recursive: true });
+      console.debug(`created path: ${this.assetsPath}`);
     }
+  }
 
-    this.db = lowDB(new FileSync(fsPath.join(this.path, 'nl_db.json')));
-    this.db
-      .defaults({
-        lastUpdated: '',
-        newsletter: [],
+  selectDB(dbName, defaultValue = undefined) {
+    this.db = lowDB(
+      new FileSync(fsPath.join(this.path, dbName), {
+        defaultValue: defaultValue || {},
       })
-      .write();
+    );
+    return this;
   }
 
   get(path, compareFunc = undefined) {
@@ -40,8 +42,8 @@ class LowDB {
 
     // is path array?
     if (!this.db.get(path).isArray().value()) {
-      // if not, simply override the value
-      return this.db.set(path, obj).write();
+      // if not assign to path
+      return this.db.get(path).assign(obj).write();
     }
 
     // try to update existing value
@@ -60,11 +62,24 @@ class LowDB {
       return this.db.get(path).push(obj).write();
     }
 
-    return res;
+    return obj;
   }
 
-  delete(path, id) {
-    return this.db.get(path).remove({ id }).write();
+  delete(path, compareFunc) {
+    return this.db
+      .get(path)
+      .remove((v) => compareFunc(v))
+      .write();
+  }
+
+  saveAsset(filename, data, override = false) {
+    const path = fsPath.join(this.assetsPath, filename);
+    if (fs.existsSync(path) && !override) {
+      console.log(`file ${filename} already exists at path ${path}`);
+      return path;
+    }
+    fs.writeFileSync(path, data);
+    return path;
   }
 }
 

@@ -26,7 +26,7 @@ const disconnectClient = async (client) => {
   return true;
 };
 
-const fetch = async (client, date, queryMethod, mailbox, includeContent) => {
+const fetch = async (client, date, queryMethod, includeContent) => {
   const msg = [];
   // Select and lock a mailbox. Throws if mailbox does not exist
 
