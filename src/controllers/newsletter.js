@@ -17,9 +17,12 @@ export const newsletterPage = async (req, res) => {
   }
 };
 
+// eslint-disable-next-line consistent-return
 export const retrieveNewsletter = async (req, res) => {
   if (new Date(req.params.date) === 'Invalid Date') {
-    return res.status(200).json({ error: 'Invalid Date. Date must be formatted as YYYY-MM-DD' });
+    return res
+      .status(200)
+      .json({ error: 'Invalid Date. Date must be formatted as YYYY-MM-DD' });
   }
   const mails = await retrieveMails('Newsletter', new Date(req.params.date));
   mails.forEach((m) => {
@@ -31,11 +34,7 @@ export const retrieveNewsletter = async (req, res) => {
         m.source
       ),
     };
-    nlModel.insert(
-      'newsletter',
-      newNL,
-      (nl) => compareDateStrings(newNL.id, nl.id)
-    );
+    nlModel.insert('newsletter', newNL, (nl) => compareDateStrings(newNL.id, nl.id));
   });
   const lastUpdated = new Date();
   nlModel.insert('lastUpdated', lastUpdated);

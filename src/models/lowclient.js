@@ -48,7 +48,7 @@ class LowDB {
 
     // try to update existing value
     let updated = false;
-    const res = this.db
+    this.db
       .get(path)
       .find((val) => {
         updated = compareFunc ? compareFunc(val) : val === obj;

@@ -30,7 +30,7 @@ class MailClient {
 
     // convert source to better handle data
     const pp = [];
-    msg.forEach(m => {
+    msg.forEach((m) => {
       pp.push(simpleParser(m.source));
     });
     const res = await Promise.all(pp);
